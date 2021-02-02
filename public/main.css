@@ -1,0 +1,19 @@
+html{
+    height: 100%;
+    width: 100%;
+    /*safari ios のバウンス？を止めるための施し*/
+    overflow: hidden;
+}body{
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: #ffffff;
+    /*overflow: hidden; safari ios バウンス対策でauto にするが、そもそもhidden にしていた深い理由が不明なため要注意*/
+    /*変えたあと試したけど、結局変化ないんすけどだいじょぶっすかねぇ*/
+    overflow: auto;
+}:root{
+    --mdc-theme-primary: #00405d;
+    --mdc-theme-secondary: #ffbfa2;
+    --mdc-theme-on-primary: #fff2d3;
+}
