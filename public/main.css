@@ -17,3 +17,165 @@ html{
     --mdc-theme-secondary: #ffbfa2;
     --mdc-theme-on-primary: #fff2d3;
 }
+
+#bottom_app_bar{
+    z-index: 3;
+    background-color: #ffffff;
+    width: 100vw;
+    position: fixed;
+    bottom: 0px;
+    padding: 0px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+    transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0s;
+}.mdc-tab__content{
+    flex-direction: column;
+}.mdc-tab:not(.mdc-tab--stacked) .mdc-tab__icon+.mdc-tab__text-label{
+    padding: 0px;
+}.mdc-tab{
+    height: 50px;
+}.mdc-tab-indicator.onfooter{
+    display: none !important;
+}.mdc-tab--active .mdc-tab__icon{
+    color: #00405d !important;
+}.mdc-tab__text-label{
+    font-size: 0.5em
+}
+
+@media screen and (min-width:600px){
+    .top_level_page{
+        /*height: calc(100% - 114px); BottomAppBar 実装まで値は変更する*/
+        height: calc(100% - 64px);
+        margin-top: 64px
+    }#header_logo{
+        height: 64px;
+    }
+}@media screen and (max-width:599px){
+    .top_level_page{
+        /*height: calc(100% - 106px); 上の表示同様*/
+        height: calc(100% - 56px);
+        margin-top: 56px;
+    }#header_logo{
+        height: 56px;
+    }
+}.top_level_page{
+    width: 100%;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    /* スクロールを滑らかにする */
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;    /* IE, Edge 対応 */
+    scrollbar-width: none;       /* Firefox 対応 */
+    /*margin-top: 56px; 20210203追加したけど、そもそも以前これなしで動いた理由がわからん */
+    /*margin-topは必要でした20210322*/
+}.top_level_page::-webkit-scrollbar {  /* Chrome, Safari 対応 */
+    display:none;
+}
+
+.job_area{
+    width: fit-content;
+    margin-right: 8px;
+}
+.job_button{
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+}
+.job_text{
+    overflow: hidden;
+    max-width: 64px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 0px;
+    font-size: 0.8em;
+    color: #999999;
+    text-align: center;
+}.job_icon{
+    font-size: 2em;
+}
+
+
+#google_div{
+    background-image: url("images/google_login_button/btn_google_signin_light_normal_web@2x.png");
+}#google_div:hover{
+    background-image: url("images/google_login_button/btn_google_signin_light_focus_web@2x.png");
+}#google_div:active{
+    background-image: url("images/google_login_button/btn_google_signin_light_pressed_web@2x.png");
+}#google_div::before {
+    display: block;
+    content: " ";
+    margin-top: 24.0837696335079%;
+}
+
+
+.moving_holder{
+    overflow: hidden;
+    /* animation */
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderAnimation;
+    animation-timing-function: linear;
+    background: linear-gradient(to right, #eee 8%, #ddd 18%, #eee 33%);
+    background-size: 100% 100% ;
+    position: relative;
+}
+@keyframes placeHolderAnimation{
+    0% {
+       background-position: 0px 0
+    }
+    100% {
+       background-position: 100vw 0
+    }
+}
+
+
+#anonymous_image{
+    background-image: url("images/tokumeinotoki.jpg");
+}#anonymous_image::before {
+    display: block;
+    content: " ";
+    margin-top: 100%;
+}
+
+
+#job_no_board_image{
+    background-image: url("images/jobboard.jpg");
+}#job_no_board_image::before {
+    display: block;
+    content: " ";
+    margin-top: 100%;
+}
+
+.card_subtitle {
+    font-size: 0.7em;
+    font-weight: 400;
+    margin: 0px;
+    color: #595959;
+}.card_contents {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin: 3vh 0px 0px 0px;
+    font-size: 1.2em;
+    bottom: 0px;
+}.jobcard{
+    padding: 16px;
+}
+#job_level{
+    /*font-size: 2em;*/
+}
+
+#no_history_image{
+    background-image: url("images/surfer.jpg");
+}#no_history_image::before {
+    display: block;
+    content: " ";
+    margin-top: 100%;
+}
+
+.how_much_plus::before{
+    margin: 0px;
+    font-size: 0.8em;
+    content: "+";
+}
